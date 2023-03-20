@@ -6,17 +6,9 @@ function getSplitter() {
   if (splitGraphemes)
     return splitGraphemes;
 
-  // Intl.Segmenter is part of https://github.com/tc39/proposal-intl-segmenter
-  // It got introduced in v8 8.8 (Node 16.0.0).
-  // TODO: stop using grapheme-splitter after support for Node 14 is dropped.
-  if (typeof Intl.Segmenter !== `undefined`) {
-    const segmenter = new Intl.Segmenter(`en`, {granularity: `grapheme`});
-    return splitGraphemes = text => Array.from(segmenter.segment(text), ({segment}) => segment);
-  } else {
-    const GraphemeSplitter = require(`grapheme-splitter`);
-    const splitter = new GraphemeSplitter();
-    return splitGraphemes = text => splitter.splitGraphemes(text);
-  }
+  const GraphemeSplitter = require(`grapheme-splitter`);
+  const splitter = new GraphemeSplitter();
+  return splitGraphemes = text => splitter.splitGraphemes(text);
 }
 
 module.exports = (orig, at = 0, until = orig.length) => {
