@@ -5,15 +5,6 @@ __metadata:
   version: 6
   cacheKey: 8
 
-"@arcanis/slice-ansi@workspace:.":
-  version: 0.0.0-use.local
-  resolution: "@arcanis/slice-ansi@workspace:."
-  dependencies:
-    grapheme-splitter: ^1.0.4
-    jest: ^26.1.0
-  languageName: unknown
-  linkType: soft
-
 "@babel/code-frame@npm:^7.0.0, @babel/code-frame@npm:^7.10.4":
   version: 7.10.4
   resolution: "@babel/code-frame@npm:7.10.4"
@@ -612,6 +603,15 @@ __metadata:
   checksum: 27548516637df1ccfbc4e72e4213f271a78f5ce4ee70fb3ca46da9f550cabc90803d97f4f2bc1231aa72b8555a22337e15d17dd4889b85975d884dbc5b60573b
   languageName: node
   linkType: hard
+
+"@pnpm/slice-ansi@workspace:.":
+  version: 0.0.0-use.local
+  resolution: "@pnpm/slice-ansi@workspace:."
+  dependencies:
+    grapheme-splitter: ^1.0.4
+    jest: ^26.1.0
+  languageName: unknown
+  linkType: soft
 
 "@sinonjs/commons@npm:^1.7.0":
   version: 1.8.0
