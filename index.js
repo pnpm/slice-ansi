@@ -1,4 +1,4 @@
-const ANSI_SEQUENCE = /^(.*?)(\x1b\[[^m]+m|\x1b\]8;;.*?(\x1b\\|\u0007))/;
+const ANSI_SEQUENCE = /^([\s\S]*?)(\x1b\[[^m]+m|\x1b\]8;;[\s\S]*?(\x1b\\|\u0007))/;
 
 let splitGraphemes;
 
